@@ -1,23 +1,27 @@
 - class_name: 友情链接
-  class_desc: 那些人，那些事
+  class_desc: 需要我这个小白好好学习的大佬们
   link_list:
-    - name: Hexo
-      link: https://hexo.io/zh-tw/
-      avatar: https://d33wubrfki0l68.cloudfront.net/6657ba50e702d84afb32fe846bed54fba1a77add/827ae/logo.svg
-      descr: 快速、简单且强大的网誌框架
+    - name: 波波哥
+      link: https://jegret.cn
+      avatar: https://jegret.cn/img/avatar.jpg
+      descr: 身材很好的编程大佬
+    - name: 菲菲姐
+      link: https://greyorange.xyz/images/avatar.png
+      avatar: https://greyorange.xyz/images/avatar.png
+      descr: 理论学习天花板，波波哥的良配
 
-- class_name: 网站
+- class_name: 网站小盒子
   class_desc: 值得推荐的网站
   link_list:
-    - name: Youtube
-      link: https://www.youtube.com/
-      avatar: https://i.loli.net/2020/05/14/9ZkGg8v3azHJfM1.png
-      descr: 视频网站
-    - name: Weibo
-      link: https://www.weibo.com/
-      avatar: https://i.loli.net/2020/05/14/TLJBum386vcnI1P.png
-      descr: 中国最大社交分享平台
-    - name: Twitter
-      link: https://twitter.com/
-      avatar: https://i.loli.net/2020/05/14/5VyHPQqR6LWF39a.png
-      descr: 社交分享平台
+    - name: GitHub
+      link: https://github.com/
+      avatar: https://i.loli.net/2021/08/18/8GNXQJsF6gwKr3P.jpg
+      descr: 世界上最大的代码托管平台，开发者之家
+    - name: Bilibili
+      link: https://www.bilibili.com/
+      avatar: https://i.loli.net/2021/08/18/KymJaDRreBkfc1E.png
+      descr: Bilibili大学，学习鬼畜兼备
+    - name: 站酷
+      link: https://www.zcool.com.cn/home
+      avatar: https://i.loli.net/2021/08/18/Gh1Myi8JbXZnSQK.jpg
+      descr: 很酷的网站，我喜欢经常逛逛，收录了许多很好的创意

@@ -42,10 +42,10 @@ copy:
 # formal:
 #   icon: link || the description
 social:
-  fab fa-github: https://github.com/mayByt || Github
-  fas fa-envelope: mailto:may.tian@foxmail.com || Email
-  fab fa-weixin: https://i.loli.net/2021/08/17/frW1mqN3SAzaJ2V.jpg || WeChat
-  fab fa-qq: https://i.loli.net/2021/08/17/TGHxE3ZC52cqvAa.jpg || QQ
+  iconfont icon-GitHub: https://github.com/mayByt || Github
+  iconfont icon-youjian: mailto:may.tian@foxmail.com || Email
+  iconfont icon-weixin: https://i.loli.net/2021/08/17/frW1mqN3SAzaJ2V.jpg || WeChat
+  iconfont icon-QQ: https://i.loli.net/2021/08/17/TGHxE3ZC52cqvAa.jpg || QQ
 
 # search (搜索)
 # --------------------------------------
@@ -562,7 +562,7 @@ activate_power_mode:
 # Mouse click effects: fireworks (鼠標點擊效果: 煙火特效)
 fireworks:
   enable: false
-  zIndex: 9999 # -1 or 9999
+  zIndex: 2000 # -1 or 9999
   mobile: false
 
 # Mouse click effects: Heart symbol (鼠標點擊效果: 愛心)
@@ -572,12 +572,12 @@ click_heart:
 
 # Mouse click effects: words (鼠標點擊效果: 文字)
 ClickShowText:
-  enable: false
+  enable: ture
   text:
-    # - I
-    # - LOVE
-    # - YOU
-  fontSize: 15px
+    - I
+    - LOVE
+    - YOU
+  fontSize: 20px
   random: false
   mobile: false
 
@@ -843,7 +843,7 @@ css_prefix: true
 # 插入代码到头部 </head> 之前 和 底部 </body> 之前
 inject:
   head:
-    # - <link rel="stylesheet" href="/xxx.css">
+    - <link rel="stylesheet" href="css/socialicons.css">
   bottom:
     # - <script src="xxxx"></script>
 

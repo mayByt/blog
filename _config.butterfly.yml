@@ -196,14 +196,14 @@ post_copyright:
 
 # Sponsor/reward
 reward:
-  enable: false
+  enable: true
   QR_code:
-    # - img: /img/wechat.jpg
-    #   link:
-    #   text: wechat
-    # - img: /img/alipay.jpg
-    #   link:
-    #   text: alipay
+    - img: /img/wechat.JPG
+      link:
+      text: 微信
+    - img: /img/alipay.JPG
+      link:
+      text: 支付宝
 
 # Post edit
 # Easily browse and edit blog source code online.
@@ -419,7 +419,7 @@ footer:
   owner:
     enable: true
     since: 2020
-  custom_text: 欢迎来到天的小空间</br>Welcome to my Blog
+  custom_text: 欢迎来到天的小空间</br>Welcome to my Sky
   copyright: true # Copyright of theme and framework
 
 # Analysis
@@ -572,7 +572,7 @@ click_heart:
 
 # Mouse click effects: words (鼠標點擊效果: 文字)
 ClickShowText:
-  enable: ture
+  enable: true
   text:
     - I
     - LOVE
@@ -694,8 +694,8 @@ busuanzi:
 # Time difference between publish date and now (網頁運行時間)
 # Formal: Month/Day/Year Time or Year/Month/Day Time
 runtimeshow:
-  enable: false
-  publish_date:
+  enable: true
+  publish_date: 2021/08/16
 
 # Aside widget - Newest Comments
 newest_comments:
@@ -782,14 +782,14 @@ note:
 # It may contain bugs and unstable, give feedback when you find the bugs.
 # https://github.com/MoOx/pjax
 pjax:
-  enable: false
+  enable: true
   exclude:
     # - xxxx
     # - xxxx
 
 # Inject the css and script (aplayer/meting)
 aplayerInject:
-  enable: false
+  enable: true
   per_page: true
 
 # Snackbar (Toast Notification 彈窗)
@@ -844,8 +844,9 @@ css_prefix: true
 inject:
   head:
     - <link rel="stylesheet" href="css/socialicons.css">
+    - <link rel="stylesheet" href="css/mousediy.css">
   bottom:
-    # - <script src="xxxx"></script>
+    - <div class="aplayer no-destroy" data-id="6926241253" data-server="netease" data-type="playlist" data-fixed="true" data-mini="true" data-listFolded="true" data-volume="0.2" data-order="random" data-theme="#44cef6" data-preload="none" data-autoplay="true" muted></div>
 
 # CDN
 # Don't modify the following settings unless you know how they work

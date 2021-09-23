@@ -135,3 +135,7 @@ live2d:
 aplayer:
   meting: true # MetingJS 支持
   asset_inject: false # 自动插入 Aplayer.js 与 Meting.js 资源脚本, 默认开启
+
+  theme_color:
+   enable: true
+   main: "#e58a8a" # 文章颜色

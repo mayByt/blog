@@ -7,7 +7,7 @@ categories: 数据结构
 description:
 ---
 
-# **02-线性结构2 一元多项式的乘法与加法运算**
+# **02-线性结构 2 一元多项式的乘法与加法运算**
 
 ## 题目要求
 
@@ -15,11 +15,11 @@ description:
 
 ### 输入格式:
 
-输入分2行，每行分别先给出多项式非零项的个数，再以指数递降方式输入一个多项式非零项系数和指数（绝对值均为不超过1000的整数）。数字间以空格分隔。
+输入分 2 行，每行分别先给出多项式非零项的个数，再以指数递降方式输入一个多项式非零项系数和指数（绝对值均为不超过 1000 的整数）。数字间以空格分隔。
 
 ### 输出格式:
 
-输出分2行，分别以指数递降方式输出乘积多项式以及和多项式非零项的系数和指数。数字间以空格分隔，但结尾不能有多余空格。零多项式应输出`0 0`。
+输出分 2 行，分别以指数递降方式输出乘积多项式以及和多项式非零项的系数和指数。数字间以空格分隔，但结尾不能有多余空格。零多项式应输出`0 0`。
 
 ### 输入样例:
 
@@ -53,8 +53,8 @@ struct PolyNode {
 ```
 int main()
 {
-	读取多项式1
-	读取多项式2
+	读取多项式 1
+	读取多项式 2
 	乘法运算并输出
 	加法运算并输出
 	
@@ -66,7 +66,7 @@ int main()
 
 ① 读取函数
 
-根据题目的输入样例，设计读取函数，由于链表中结点链接到链表中从操作频繁，增加设计一个链接函数Attach()，方便操作。
+根据题目的输入样例，设计读取函数，由于链表中结点链接到链表中从操作频繁，增加设计一个链接函数 Attach()，方便操作。
 
 ```cpp
 // 链接函数
@@ -77,7 +77,7 @@ void Attach(int c, int e, Polynomial *pRear)
     t->expon = e;
     t->link = NULL;
     (*pRear)->link = t;
-    *pReal = t; // 修改*pRear的值
+    *pReal = t; // 修改*pRear 的值
 }
 // 读取多项式函数
 Polynomial ReadPoly()
@@ -161,7 +161,7 @@ Polynomial AddPoly(Polynomial P1, Polynomial P2)
 
 ​	<1> 将乘法运算转变为加法运算
 
-​			将P1当前项（c<sub>i</sub> ,e<sub>i</sub> ) 乘 P2多项式，再加到结果多项式里
+​			将 P1 当前项（c<sub>i</sub> ,e<sub>i</sub> ) 乘 P2 多项式，再加到结果多项式里
 
 ```cpp
 t1 = P1; t2 = P2;
@@ -176,19 +176,19 @@ while(t2)
 
 ​	<2> 逐项插入
 
-​			将P1当前项（c1<sub>i</sub> ,e1<sub>i</sub> ) 乘P2当前项（c2<sub>i</sub> ,e2<sub>i</sub> )，并插入到结果多项式中。关键是要找到插入位置。其中结果多项式的初始位置可由P1的第一项乘以P2获得。 
+​			将 P1 当前项（c1<sub>i</sub> ,e1<sub>i</sub> ) 乘 P2 当前项（c2<sub>i</sub> ,e2<sub>i</sub> )，并插入到结果多项式中。关键是要找到插入位置。其中结果多项式的初始位置可由 P1 的第一项乘以 P2 获得。 
 
 ```cpp
 t1 = t1->link;
     while(t1)
     {
         t2 = P2;
-        Rear = P;   // 每一次的t1指向的多项式乘以t2的每一项后，Rear都重新指回P的头结点，以便下一次得到的t1和t2的乘积插入P
+        Rear = P;   // 每一次的 t1 指向的多项式乘以 t2 的每一项后，Rear 都重新指回 P 的头结点，以便下一次得到的 t1 和 t2 的乘积插入 P
         while(t2)
         {
             c = t1->coef * t2->coef;
             e = t1->expon + t2->expon;
-            while (Rear->link && Rear->link->expon > e) // 当Rear的下一项不为空且下一项的指数比当前的乘积e大时，Rear后移
+            while (Rear->link && Rear->link->expon > e) // 当 Rear 的下一项不为空且下一项的指数比当前的乘积 e 大时，Rear 后移
             {
                 Rear = Rear->link;
             }
@@ -198,14 +198,14 @@ t1 = t1->link;
                 {
                     Rear->link->coef+=c;
                 }
-                else    // 指数相同时，结果系数为0
+                else    // 指数相同时，结果系数为 0
                 {
                     t = Rear->link; // 将零项删除
                     Rear->link = t->link;
                     free(t);
                 }
             }
-            else    // 当前多项式的指数大于Rear的下一项
+            else    // 当前多项式的指数大于 Rear 的下一项
             {
                 t = new PolyNode;
                 t->coef = c;
@@ -224,7 +224,7 @@ t1 = t1->link;
 
 ​	要按照输出样例的格式输出，注意到输出的多项式每组系数和指数间都有空格，每个项之间也有空格，但是首尾没有空格。
 
-​	可以把每组数据看作，“空格+系数+指数”，但是第一项没有空格，因此可以设置一个flag来控制输出，flag 初始值为0，在执行一步输出操作后置为1，只有flag为1时才输出空格。
+​	可以把每组数据看作，“空格+系数+指数”，但是第一项没有空格，因此可以设置一个 flag 来控制输出，flag 初始值为 0，在执行一步输出操作后置为 1，只有 flag 为 1 时才输出空格。
 
 ```cpp
 // 打印结果多项式函数
@@ -256,7 +256,7 @@ void PrintPoly(Polynomial P)
 ### 代码：
 
 ```cpp
-#include<bits/stdc++.h>
+#include<bits/stdC++.h>
 using namespace std;
 
 typedef struct PolyNode *Polynomial;   // 多项式
@@ -292,7 +292,7 @@ void Attach(int c, int e, Polynomial *pRear)
     t->expon = e;
     t->link = NULL;
     (*pRear)->link = t;
-    *pRear = t; // 修改*pRear的值
+    *pRear = t; // 修改*pRear 的值
 }
 // 读取多项式函数
 Polynomial ReadPoly()
@@ -372,7 +372,7 @@ Polynomial MultPoly(Polynomial P1, Polynomial P2)
     Polynomial P = new PolyNode;
     P->link = NULL;
     Rear = P;
-    while(t2)   // 先用P1的第一项乘以P2作为结果多项式的初始值
+    while(t2)   // 先用 P1 的第一项乘以 P2 作为结果多项式的初始值
     {
         Attach(t1->coef*t2->coef,t1->expon+t2->expon,&Rear);
         t2 = t2->link;
@@ -381,12 +381,12 @@ Polynomial MultPoly(Polynomial P1, Polynomial P2)
     while(t1)
     {
         t2 = P2;
-        Rear = P;   // 每一次的t1指向的多项式乘以t2的每一项后，Rear都重新指回P的头结点，以便下一次得到的t1和t2的乘积插入P
+        Rear = P;   // 每一次的 t1 指向的多项式乘以 t2 的每一项后，Rear 都重新指回 P 的头结点，以便下一次得到的 t1 和 t2 的乘积插入 P
         while(t2)
         {
             c = t1->coef * t2->coef;
             e = t1->expon + t2->expon;
-            while (Rear->link && Rear->link->expon > e) // 当Rear的下一项不为空且下一项的指数比当前的乘积e大时，Rear后移
+            while (Rear->link && Rear->link->expon > e) // 当 Rear 的下一项不为空且下一项的指数比当前的乘积 e 大时，Rear 后移
             {
                 Rear = Rear->link;
             }
@@ -396,14 +396,14 @@ Polynomial MultPoly(Polynomial P1, Polynomial P2)
                 {
                     Rear->link->coef+=c;
                 }
-                else    // 指数相同时，结果系数为0
+                else    // 指数相同时，结果系数为 0
                 {
                     t = Rear->link; // 将零项删除
                     Rear->link = t->link;
                     free(t);
                 }
             }
-            else    // 当前多项式的指数大于Rear的下一项
+            else    // 当前多项式的指数大于 Rear 的下一项
             {
                 t = new PolyNode;
                 t->coef = c;
@@ -426,7 +426,7 @@ Polynomial MultPoly(Polynomial P1, Polynomial P2)
 void PrintPoly(Polynomial P)
 {
     bool flag = 0;
-    if(!P)  // 注意判断P是否为0多项式
+    if(!P)  // 注意判断 P 是否为 0 多项式
     {
         cout << "0 0";
     }

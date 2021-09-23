@@ -7,7 +7,7 @@ categories: PTA刷题笔记
 description:
 ---
 
-# PTA团队天梯赛║L1-011 A-B
+# PTA 团队天梯赛║L1-011 A-B
 
 ## 一、题目要求
 
@@ -15,7 +15,7 @@ description:
 
 ### 输入格式：
 
-输入在2行中先后给出字符串*A*和*B*。两字符串的长度都不超过104，并且保证每个字符串都是由可见的ASCII码和空白字符组成，最后以换行符结束。
+输入在 2 行中先后给出字符串*A*和*B*。两字符串的长度都不超过 104，并且保证每个字符串都是由可见的 ASCII 码和空白字符组成，最后以换行符结束。
 
 ### 输出格式：
 
@@ -36,7 +36,7 @@ I lv GPLT!  It's  fn gm!
 
 ## 二、解题思路
 
-设置一个flag，暴力循环比较a字符串的每一个字符是否与b字符串中的字符相同，如果发现相同，flag更新为false，最后用 **if(flag)** 控制输出a字符串
+设置一个 flag，暴力循环比较 a 字符串的每一个字符是否与 b 字符串中的字符相同，如果发现相同，flag 更新为 false，最后用 **if(flag)** 控制输出 a 字符串
 
 ## 三、代码
 
@@ -78,14 +78,14 @@ int main()
 
 ## 四、反思总结
 
-程序时间复杂度为O(n<sup>2</sup>),程序耗时很长![在这里插入图片描述](https://img-blog.csdnimg.cn/20210303191915276.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzQ2NDkyMTE4,size_16,color_FFFFFF,t_70)
+程序时间复杂度为 O(n<sup>2</sup>),程序耗时很长![在这里插入图片描述 ](https://img-blog.csdnimg.cn/20210303191915276.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzQ2NDkyMTE4,size_16,color_FFFFFF,t_70)
 
 
-网上看到柳诺大神巧妙的方法将时间复杂度降到O(n),思路与代码如下
+网上看到柳诺大神巧妙的方法将时间复杂度降到 O(n),思路与代码如下
 
-> **分析：辣么多ASCII码也在0~255之间，所以用book数组标记所有的ASCII码～如果第二个字符出现了这个ACSII码那就标记为1~然后输出的时候当book数组对应的那个ASCII为1的时候就跳过不输出～**
+> **分析：辣么多 ASCII 码也在 0~255 之间，所以用 book 数组标记所有的 ASCII 码～如果第二个字符出现了这个 ACSII 码那就标记为 1~然后输出的时候当 book 数组对应的那个 ASCII 为 1 的时候就跳过不输出～**
 >
-> *引自https://www.liuchuo.net/archives/1597*
+> *引自 https://www.liuchuo.net/archives/1597*
 
 ```cpp
 #include <iostream>
@@ -104,4 +104,4 @@ int main() {
 }
 ```
 
-在测试点1和3耗时大为降低![](https://img-blog.csdnimg.cn/20210303191537645.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzQ2NDkyMTE4,size_16,color_FFFFFF,t_70)
+在测试点 1 和 3 耗时大为降低![](https://img-blog.csdnimg.cn/20210303191537645.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzQ2NDkyMTE4,size_16,color_FFFFFF,t_70)

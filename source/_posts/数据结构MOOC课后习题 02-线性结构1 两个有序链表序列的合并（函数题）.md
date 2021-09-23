@@ -7,7 +7,7 @@ categories: 数据结构
 description:
 ---
 
-# **02-线性结构1 两个有序链表序列的合并**（函数题）
+# **02-线性结构 1 两个有序链表序列的合并**（函数题）
 
 ## 题目要求
 
@@ -47,7 +47,7 @@ struct Node {
 typedef PtrToNode List;
 
 List Read(); /* 细节在此不表 */
-void Print( List L ); /* 细节在此不表；空链表将输出NULL */
+void Print( List L ); /* 细节在此不表；空链表将输出 NULL */
 
 List Merge( List L1, List L2 );
 
@@ -90,7 +90,7 @@ List Merge( List L1, List L2 )
 {
     List L = (List)malloc(sizeof(struct Node));
     List tempL1 = L1->Next, tempL2 = L2->Next;
-    List head = L;  // 合并后链表L的头结点
+    List head = L;  // 合并后链表 L 的头结点
     while(tempL1 && tempL2)
     {
         if(tempL1->Data <= tempL2->Data)
@@ -115,7 +115,7 @@ List Merge( List L1, List L2 )
 
 ### 解题思路
 
-合并链表的操作重点就是将较小链表节点（此处记为tempL）插入到合并链表之后：
+合并链表的操作重点就是将较小链表节点（此处记为 tempL）插入到合并链表之后：
 
 ```cpp
 1. L->Next = tempL;
@@ -129,5 +129,5 @@ List Merge( List L1, List L2 )
 L->Next = tempL1 ? tempL1 : tempL2;
 ```
 
-在题目的输出样例中，L1 和 L2打印均为 NULL，因此，在函数最后将 L1->Next 和 L2->Next 全部置为NULL。
+在题目的输出样例中，L1 和 L2 打印均为 NULL，因此，在函数最后将 L1->Next 和 L2->Next 全部置为 NULL。
 

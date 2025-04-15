@@ -1,5 +1,15 @@
 # Hexo-个人 BLog 日志
 
+## 2.2.2（2021/10/01）
+
+新的博文里用到了 mathjax 的数学公式，需要添加页面对于数学公式的渲染。
+
+```yaml
+mathjax:
+  enable: true
+  per_page: false
+```
+
 ## 2.2.1（2021/09/22）
 
 根据 [中文文案排版指北 ](https://github.com/sparanoid/chinese-copywriting-guidelines/blob/master/README.zh-CN.md) 对于博客文章进行重新排版，增强内容的可读性。利用了 github 中的在线排版工具：[Text-Typesetting](https://github.com/CyC2018/Text-Typesetting)。
